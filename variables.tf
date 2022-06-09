@@ -42,6 +42,7 @@ variable "custom_endpoint_enabled" {
   type    = bool
   default = false
 }
+
 variable "dedicated_master_enabled" {
   type = bool
   default = false
