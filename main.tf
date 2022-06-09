@@ -9,7 +9,7 @@ resource "aws_opensearch_domain" "example" {
   engine_version = var.engine_version
 
   cluster_config {
-    dedicated_master_enabled = false
+    dedicated_master_enabled = var.dedicated_master_enabled
     instance_count           = var.instance_count
     instance_type            = var.instance_type
     cold_storage_options {
