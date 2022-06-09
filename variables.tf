@@ -77,7 +77,11 @@ variable "node_encryption" {
   default = false
 }
 
-# variable "domain" {
-#   type = map(string)
-#   default = {"TestDomain"}
-# }
+variable "tags" {
+  type = map
+  default = {
+    "Domain" = "TestDomain"
+    "env" = "test"
+    "Name" = "mytest opensearch"
+    }
+}

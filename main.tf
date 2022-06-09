@@ -37,7 +37,5 @@ resource "aws_opensearch_domain" "example" {
   node_to_node_encryption {
     enabled = var.node_encryption
   }
-  tags = {
-    Domain = "TestDomain"
-  }
+  tags = var.tags
 }
