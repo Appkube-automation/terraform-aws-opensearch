@@ -2,7 +2,6 @@ variable "region_name" {
   type    = string
   default = "us-east-1"
 }
-
 variable "domain_name" {
   type    = string
   default = "example"
@@ -20,13 +19,13 @@ variable "instance_count" {
 
 variable "instance_type" {
   type    = string
-  default = "r4.large.search"
+  default = "m6g.large.search"
 }
 
-variable "volume_size" {
-  type    = number
-  default = 10
-}
+# variable "volume_size" {
+#   type    = number
+#   default = 10
+# }
 
 variable "volume_type" {
   type    = string
@@ -71,9 +70,10 @@ variable "availability_zone_count" {
 
 # }
 
-# variable "tls_security_policy" {
-
-# }
+variable "tls_security_policy" {
+  type = string
+  default = "Policy-Min-TLS-1-0-2019-07"
+ }
 
 variable "node_encryption" {
   type    = bool

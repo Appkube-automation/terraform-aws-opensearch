@@ -19,7 +19,8 @@ resource "aws_opensearch_domain" "example" {
   ebs_options {
     ebs_enabled = false
     #  iops        =  
-    volume_size = var.volume_size
+    #volume_size = var.volume_size
+    volume_size = 10
     volume_type = var.volume_type
   }
   domain_endpoint_options {
@@ -27,7 +28,7 @@ resource "aws_opensearch_domain" "example" {
     //custom_endpoint_certificate_arn = var.custom_endpoint_enabled?var.custom_endpoint_certificate_arn:null
     custom_endpoint_enabled = var.custom_endpoint_enabled
     enforce_https                   = var.enforce_https
-    //tls_security_policy             = var.tls_security_policy
+    tls_security_policy             = var.tls_security_policy
   }
 
   encrypt_at_rest {
