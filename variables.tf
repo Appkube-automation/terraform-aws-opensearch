@@ -43,7 +43,7 @@ variable "custom_endpoint_enabled" {
   default = false
 }
 variable "dedicated_master_enabled" {
-  type = bool
+  type    = bool
   default = false
 }
 
@@ -81,10 +81,10 @@ variable "node_encryption" {
 }
 
 variable "tags" {
-  type = map
+  type = map(any)
   default = {
     "Domain" = "TestDomain"
-    "env" = "test"
-    "Name" = "mytest opensearch"
-    }
+    "env"    = "test"
+    "Name"   = "mytest opensearch"
+  }
 }
