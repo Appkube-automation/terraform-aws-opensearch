@@ -19,7 +19,7 @@ variable "instance_count" {
 
 variable "instance_type" {
   type    = string
-  default = "m6g.large.search"
+  default = "m4.large.search"
 }
 
 # variable "volume_size" {
@@ -69,6 +69,16 @@ variable "availability_zone_count" {
 # variable "custom_endpoint_certificate_arn" {
 
 # }
+
+variable "ebs_enabled" {
+  type = bool
+  default = false
+}
+
+variable "ebs_iops" {
+  type = number
+  default = 10
+}
 
 variable "tls_security_policy" {
   type    = string

@@ -17,10 +17,9 @@ resource "aws_opensearch_domain" "example" {
     }
   }
   ebs_options {
-    ebs_enabled = false
-    #  iops        =  
-    #volume_size = var.volume_size
-    volume_size = 10
+    ebs_enabled =  var.ebs_enabled
+    iops        =  var.ebs_iops
+    volume_size = var.volume_size
     volume_type = var.volume_type
   }
   domain_endpoint_options {
