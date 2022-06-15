@@ -27,8 +27,13 @@ resource "aws_opensearch_domain" "example" {
     custom_endpoint = var.custom_endpoint_enabled ? var.custom_endpoint : null
     //custom_endpoint_certificate_arn = var.custom_endpoint_enabled?var.custom_endpoint_certificate_arn:null
     custom_endpoint_enabled = var.custom_endpoint_enabled
+<<<<<<< HEAD
     enforce_https                   = var.enforce_https
     tls_security_policy             = var.tls_security_policy
+=======
+    enforce_https           = var.enforce_https
+    //tls_security_policy             = var.tls_security_policy
+>>>>>>> 0d650e5e1bd95fb9e870c08971f90a03edf3e4ec
   }
 
   encrypt_at_rest {
