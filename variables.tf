@@ -71,9 +71,9 @@ variable "availability_zone_count" {
 # }
 
 variable "tls_security_policy" {
-  type = string
+  type    = string
   default = "Policy-Min-TLS-1-0-2019-07"
- }
+}
 
 variable "node_encryption" {
   type    = bool
