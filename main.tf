@@ -4,7 +4,7 @@ provider "aws" {
 
 }
 
-resource "aws_opensearch_domain" "example" {
+resource "aws_opensearch_domain" "default" {
   domain_name    = var.domain_name
   engine_version = var.engine_version
 
