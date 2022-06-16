@@ -2,7 +2,6 @@ variable "region_name" {
   type    = string
   default = "us-east-1"
 }
-
 variable "domain_name" {
   type    = string
   default = "example"
@@ -20,13 +19,13 @@ variable "instance_count" {
 
 variable "instance_type" {
   type    = string
-  default = "r4.large.search"
+  default = "m4.large.search"
 }
 
-variable "volume_size" {
-  type    = number
-  default = 10
-}
+# variable "volume_size" {
+#   type    = number
+#   default = 10
+# }
 
 variable "volume_type" {
   type    = string
@@ -44,7 +43,7 @@ variable "custom_endpoint_enabled" {
 }
 
 variable "dedicated_master_enabled" {
-  type = bool
+  type    = bool
   default = false
 }
 
@@ -72,9 +71,20 @@ variable "availability_zone_count" {
 
 # }
 
-# variable "tls_security_policy" {
+variable "ebs_enabled" {
+  type = bool
+  default = false
+}
 
-# }
+variable "ebs_iops" {
+  type = number
+  default = 10
+}
+
+variable "tls_security_policy" {
+  type    = string
+  default = "Policy-Min-TLS-1-0-2019-07"
+}
 
 variable "node_encryption" {
   type    = bool
@@ -82,10 +92,10 @@ variable "node_encryption" {
 }
 
 variable "tags" {
-  type = map
+  type = map(any)
   default = {
     "Domain" = "TestDomain"
-    "env" = "test"
-    "Name" = "mytest opensearch"
-    }
+    "env"    = "test"
+    "Name"   = "mytest opensearch"
+  }
 }
